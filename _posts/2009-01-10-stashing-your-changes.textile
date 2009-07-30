@@ -1,37 +1,41 @@
 ---
 layout: post
-title: stashing your changes
+title: Mettere al sicuro le tue modifiche
 category: beginner
+published: false
+
 ---
 
-Stashing is a great way to pause what you're currently working on and come back to it later. For example, if you working on that awesome, brand new feature but someone just found a bug that you need to fix. Add your changes to the index using
+Stashing &egrave; un ottimo modo per mettere in paura quello a cui stavi lavorando per tornarci sopra pi&ugrave; tardi. Ad esempio, stai lavorando a una nuova e fantastica funzionalit&agrave; ma qualcuno trova un bug che devi riparare immediatamente.
+Aggiungi le tue modifiche all'indice:
 
 @git add .@
 
-Or add individual files to the index, your pick. Stash your changes away with:
+O aggiungi un sigolo file all'indice, come preferisci.Metti al sicuro le tue modifiche con:
 
 @git stash@
 
-And boom! You're back to your original working state. Got that bug fixed? Bring your work back with:
+E magia! Sei tornato allo stato originale. Riparato il bug? Riporta il tuo lavoro indietro con:
 
 @git stash apply@
 
-You can also do multiple layers of stashes, so make sure to use 
+Puoi anche fare molti livelli di stashes, perci&ograve; assicurati di usare: 
 
 @git stash list@ 
 
-To check out all of your current ones. If you need to apply a stash from deeper in the stack, that's easy too. Here's how to apply the second stash you've got:
+Per elencarli tutti quanti. Se hai bisogno di applicare uno stash in profondit&agrave; della tua pila, &grave; molto semplice. 
+Ecco come applicare il tuo secondo stash:
 
 <code>git stash apply stash@{1}</code>
 
-You can also easily apply the top stash on the stack by using ("Thanks jamesgolick!":http://jamesgolick.com/):
+Puoi facilmente applicare lo stash in cima alla tua pila usando ("Grazie jamesgolick!":http://jamesgolick.com/):
 
 @git stash pop@
 
-A note with this command, it deletes that stash for good, while apply does not. You can manually delete stashes with:
+Una nota su questo comando: cancella lo stash, diversamente da apply che lo conserva. Puoi cancellare manualmente gli stash con:
 
 @git stash drop <id>@
 
-Or delete all of the stored stashes with:
+O cancellare tutti gli stash salvati con:
 
 @git stash clear@
