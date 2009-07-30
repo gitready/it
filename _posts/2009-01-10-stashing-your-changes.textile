@@ -2,8 +2,6 @@
 layout: post
 title: Mettere al sicuro le tue modifiche
 category: beginner
-published: false
-
 ---
 
 Stashing &egrave; un ottimo modo per mettere in paura quello a cui stavi lavorando per tornarci sopra pi&ugrave; tardi. Ad esempio, stai lavorando a una nuova e fantastica funzionalit&agrave; ma qualcuno trova un bug che devi riparare immediatamente.

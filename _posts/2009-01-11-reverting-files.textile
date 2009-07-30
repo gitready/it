@@ -1,25 +1,24 @@
 ---
 layout: post
-title: reverting files
+title: Riportare indietro un file
 category: beginner
-published: false
 
 ---
 
-This is a topic that is a constant source of confusion for many git users, basically because there's more than one way to skin the proverbial cat. Let's go over some of the basic commands that you'll need to undo your work. 
+Questo argomento &egrave; una costante fonte di confusione per molti utenti di Git, principalmente perch&egrave; ci sono pi&ugrave; di un modo per ottenere lo stesso risultato. Diamo un'occhiata ad alcuni comandi base per annullare il tuo lavoro. 
 
-So, you just want to revert one file back to its original state:
+Perci&ograve, se vuoi riportare un file al suo stato originale:
 
 @git checkout <file>@
 
-One problem with this is that you may have is that a file and branch named the same. Since the checkout command is used for both reverting files and swapping out to a different branch, you'll need to use this syntax (thanks, "Norbauer":http://norbauer.com/notebooks/code/notes/git-revert-reset-a-single-file)
+Un problema che si può avere con questa soluzione &egrave;  che pu&ograve; che un file un branch abbiano lo stesso nome. Dato che il comando checkout &egrave; usato sia per riportare indietro un file che per passare ad un branch differente, &egrave; necessario utilizzare la seguente sintassi (grazie, "Norbauer":http://norbauer.com/notebooks/code/notes/git-revert-reset-a-single-file)
 
 @git checkout -- <file>@
 
-If you want to throw out all of the changes you've been working on, there's two ways to do that.
+Per eliminare tutti le modifiche che sono state fatte, ci sono due metodi.
 
-@git checkout -f@ or @git reset --HARD@
+@git checkout -f@ o @git reset --HARD@
 
-Once these commands are run you'll lose all of the work that isn't committed in your directory, so make sure to take caution when using them.
+Una volta eseguiti questi comandi tutto il lavoro che non &egrave; stato committato nella tua directory sar&agrave; perso, perci&ograve; utilizza questi comandi con attenzione.
 
-Also, be aware that "'git revert' is not equivalent to 'svn revert'!":http://bryan-murdock.blogspot.com/2007/07/git-revert-is-not-equivalent-to-svn.html @git-revert@ is used to reverse commits, something another tip will cover in the future.
+Inoltre, attenzione che "'git revert' non &egrave; equivalente a 'svn revert'!":http://bryan-murdock.blogspot.com/2007/07/git-revert-is-not-equivalent-to-svn.html @git-revert@ &egrave; usato per annullare i commit, in futuro qualche nuovo trucco coprir&agrave meglio l'argomento.
