@@ -7,7 +7,7 @@ category: beginner
 
 Questo argomento &egrave; una costante fonte di confusione per molti utenti di Git, principalmente perch&egrave; ci sono pi&ugrave; di un modo per ottenere lo stesso risultato. Diamo un'occhiata ad alcuni comandi base per annullare il tuo lavoro. 
 
-Perci&ograve, se vuoi riportare un file al suo stato originale:
+Perci&ograve;, se vuoi riportare un file al suo stato originale:
 
 @git checkout <file>@
 
